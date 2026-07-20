@@ -29,7 +29,6 @@ class Solution {
                 y=0;
             }
             int sum=x+y+carry;
-            int n=sum%10;
             carry=sum/10;
             l4.next=new ListNode(sum%10);
             l4=l4.next;
