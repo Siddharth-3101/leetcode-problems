@@ -8,9 +8,9 @@ class Solution {
         return a;
     }
     public int gcdOfOddEvenSums(int n) {
-        int sumE=0;
-        int sumO=0;
-        for(int i=0;i<=n*2;i++){
+        int sumE=2;
+        int sumO=1;
+        for(int i=3;i<=n*2;i++){
             if(i%2==0){
                 sumE+=i;
             }
