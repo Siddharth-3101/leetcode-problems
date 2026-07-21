@@ -7,7 +7,7 @@ class Solution {
         if(n==2){return Math.max(nums[0],nums[1]);}
         m[0]=nums[0];
         m[1]=Math.max(nums[0],nums[1]);
-        for(int i=2;i<n-1;i++){
+        for(int i=2;i<n;i++){
             m[i]=Math.max(m[i-1],(m[i-2]+nums[i]));
         }
         int[] b=new int[n];
