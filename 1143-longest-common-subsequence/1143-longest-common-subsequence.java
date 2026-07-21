@@ -3,8 +3,8 @@ class Solution {
         int m=text1.length();
         int n=text2.length();
         int[][] ans=new int[m+1][n+1];
-        for(int i=1;i<m+1;i++){
-            for(int j=1;j<n+1;j++){
+        for(int i=0;i<m+1;i++){
+            for(int j=0;j<n+1;j++){
                 if(i==0||j==0){
                     ans[i][j]=0;
                     continue;
