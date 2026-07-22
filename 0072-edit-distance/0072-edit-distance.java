@@ -3,8 +3,8 @@ class Solution {
         int m=word1.length();
         int n=word2.length();
         int[][] ans=new int[m+1][n+1];
-        for(int i=0;i<m+1;i++){
-            for(int j=0;j<n+1;j++){
+        for(int i=0;i<=m;i++){
+            for(int j=0;j<=n;j++){
                 if(j==0){
                     ans[i][j]=i;
                 }
