@@ -20,9 +20,6 @@ class Solution {
                 else if(s.charAt(i-1)==p.charAt(j-1)){
                     ans[i][j]=ans[i-1][j-1];
                 }
-                else{
-                    ans[i][j]=false;
-                }
             }
         }
         return ans[m][n];
