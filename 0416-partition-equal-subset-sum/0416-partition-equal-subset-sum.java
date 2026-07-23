@@ -12,22 +12,22 @@ class Solution {
         else{
             return false;
         }
-        boolean[][] ans=new boolean[target+1][n+1];
-        ans[0][0]=true;
+        int[][] ans=new int[target+1][n+1];
+        ans[0][0]=1;
         for(int j=0;j<=n;j++){
-            ans[0][j]=true;
+            ans[0][j]=1;
         }
         for(int i=0;i<=target;i++){
             for(int j=1;j<=n;j++){
                 if(i>=nums[j-1]){
                     int rem=i-nums[j-1];
-                    ans[i][j]=ans[i][j-1]||ans[rem][j-1];
+                    ans[i][j]=Math.min(1,ans[i][j-1]+ans[rem][j-1]);
                 }
                 else{
                     ans[i][j]=ans[i][j-1];
                 }
             }
         }
-        return ans[target][n];
+        return ans[target][n]>0;
     }
 }
