@@ -15,6 +15,7 @@
  */
 class Solution {
     public TreeNode searchBST(TreeNode root, int val) {
+        System.gc();
         if(root==null){
             return null;
         }
@@ -27,6 +28,6 @@ class Solution {
         else{
             return searchBST(root.right,val);
         }
-        
+
     }
 }
