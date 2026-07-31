@@ -1,6 +1,7 @@
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         HashSet<Integer> set=new HashSet<>();
+        System.gc();
         for(int i=0;i<nums.length;i++){
             if(i>k){
                 set.remove(nums[i-k-1]);
