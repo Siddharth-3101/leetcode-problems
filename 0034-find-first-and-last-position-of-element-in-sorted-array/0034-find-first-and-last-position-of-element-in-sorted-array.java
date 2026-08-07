@@ -20,7 +20,7 @@ class Solution {
         if(start==-1){
             return new int[]{-1,-1};
         }
-        low=0;
+        low=start;
         high=n-1;
         int end=-1;
         while(low<=high){
