@@ -26,8 +26,6 @@ class Solution {
         }
         dfs(root.left,depth+1);
         dfs(root.right,depth+1);
-        
-
     }
     public int findBottomLeftValue(TreeNode root) {
         dfs(root,0);
