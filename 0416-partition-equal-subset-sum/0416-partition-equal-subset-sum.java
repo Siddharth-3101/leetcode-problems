@@ -6,7 +6,7 @@ class Solution {
             sum+=num;
         }
         int target=0;
-        if(sum%2==0){
+        if(sum%2==0){ 
             target=sum/2;
         }
         else{
