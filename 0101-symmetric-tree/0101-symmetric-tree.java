@@ -21,7 +21,7 @@ class Solution {
         if(left==null && right==null){
             return true;
         }
-        if(left==null && right!=null || left!=null && right==null){
+        if(left==null || right==null){
             return false;
         }
         if(left.val!=right.val){
