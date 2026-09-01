@@ -7,6 +7,7 @@ class Solution {
             }
         }
         int sum=0;int ans=0;
+        System.gc();
         HashMap<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<n;i++){
             sum+=nums[i];
