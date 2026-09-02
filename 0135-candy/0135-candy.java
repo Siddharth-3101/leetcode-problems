@@ -18,5 +18,6 @@ class Solution {
             ans+=num;
         }
         return ans;
+
     }
 }
