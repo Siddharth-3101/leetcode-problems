@@ -1,8 +1,8 @@
 class Solution {
     public boolean isBipartite(int[][] graph) {
         int n=graph.length;
-        int[] color=new int[n];
         Queue<Integer> queue=new LinkedList<>();
+        int[] color=new int[n];
         for(int i=0;i<n;i++){
             if(color[i]==0){
                 color[i]=-1;
@@ -19,7 +19,7 @@ class Solution {
                             }
                             queue.offer(num);
                         }
-                        if(color[num]==color[curr]){
+                        if(color[curr]==color[num]){
                             return false;
                         }
                     }
