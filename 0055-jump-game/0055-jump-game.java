@@ -3,11 +3,11 @@ class Solution {
         int n=nums.length;
         int farthest=0;
         for(int i=0;i<n;i++){
-            if(i>farthest){
+            if(farthest<i){
                 return false;
             }
             else{
-                farthest=Math.max(farthest,i+nums[i]);
+                farthest=Math.max(farthest,nums[i]+i);
             }
             if(farthest>=n-1){
                 return true;
