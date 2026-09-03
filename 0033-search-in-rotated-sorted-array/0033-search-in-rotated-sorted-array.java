@@ -5,9 +5,11 @@ class Solution {
         int high=n-1;
         while(low<=high){
             int mid=low+(high-low)/2;
-            if(nums[mid]==target){return mid;}
+            if(nums[mid]==target){
+                return mid;
+            }
             if(nums[low]<=nums[mid]){
-                if(target<nums[mid] &&nums[low]<=target){
+                if(target<nums[mid] && nums[low]<=target){
                     high=mid-1;
                 }
                 else{
@@ -17,12 +19,12 @@ class Solution {
             else{
                 if(nums[mid]<=nums[high]){
                     if(target>nums[mid] && nums[high]>=target){
-                        low=mid+1;
-                    }
-                    else{
-                        high=mid-1;
-                    }
+                    low=mid+1;
                 }
+                else{
+                    high=mid-1;
+                }
+                }   
             }
         }
         return -1;
