@@ -17,12 +17,12 @@ class Solution {
                 high=mid-1;
             }
         }
+        
         if(start==-1){
-            return new int[]{-1,-1};
-        }
+            return new int[]{-1,-1};}
         low=start;
-        high=n-1;
         int end=-1;
+        high=n-1;
         while(low<=high){
             int mid=low+(high-low)/2;
             if(nums[mid]==target){
@@ -37,6 +37,5 @@ class Solution {
             }
         }
         return new int[]{start,end};
-
     }
 }
