@@ -7,13 +7,12 @@ class Solution {
                 return false;
             }
             else{
-                farthest=Math.max(farthest,nums[i]+i);
+                farthest=Math.max(farthest,i+nums[i]);
             }
             if(farthest>=n-1){
                 return true;
             }
         }
         return false;
-        
     }
 }
