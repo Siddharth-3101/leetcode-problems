@@ -20,7 +20,6 @@ class Solution {
         inorder(root.left,k);
         ans.add(root.val);
         inorder(root.right,k);
-        
     }
     public int kthSmallest(TreeNode root, int k) {
         inorder(root,k);      
