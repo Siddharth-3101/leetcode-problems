@@ -14,21 +14,30 @@
  * }
  */
 class Solution {
-    public int depth=0;
-    List<Integer> ans=new ArrayList<>();
-    public void order(TreeNode root,int depth){
-        if(root==null){
-            return;
-        }
-        if(depth==ans.size()){
-            ans.add(root.val );
-        }
-        order(root.right,depth+1);
-        order(root.left,depth+1);
-
-    }
     public List<Integer> rightSideView(TreeNode root) {
-        order(root,depth);
+        List<Integer> ans=new ArrayList<>();
+        if(root==null){
+            return ans;
+        }
+        Queue<TreeNode> queue=new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            int size=queue.size();
+            while(size!=0){
+                TreeNode curr=queue.poll();
+                if(size==1){
+                    ans.add(curr.val);
+                }
+                if(curr.left!=null){
+                    queue.offer(curr.left);
+                }
+                if(curr.right!=null){
+                    queue.offer(curr.right);
+                }
+                size--;
+            }
+        }
         return ans;
+
     }
 }
