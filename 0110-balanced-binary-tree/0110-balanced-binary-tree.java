@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    int height(TreeNode root){
+    public int height(TreeNode root){
         if(root==null){
             return 0;
         }
@@ -26,11 +26,11 @@ class Solution {
         if(root==null){
             return true;
         }
-        int leftheight=height(root.left);
-        int rightheight=height(root.right);
-        if(leftheight-rightheight>1 ||rightheight-leftheight>1){
+        int lefth=height(root.left);
+        int righth=height(root.right);
+        if(Math.abs(lefth-righth)>1){
             return false;
         }
-        return isBalanced(root.right)&& isBalanced(root.left);
+        return isBalanced(root.right) &&  isBalanced(root.left);
     }
 }
