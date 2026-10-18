@@ -4,7 +4,6 @@ class Solution {
         int[] ans=new int[nums.length-k+1];
         int z=0;
         Deque<Integer> deque=new LinkedList<>();
-        System.gc();
         for(int i=0;i<n;i++){
             while(!deque.isEmpty() &&deque.peekFirst()<=i-k){
                 deque.pollFirst();
