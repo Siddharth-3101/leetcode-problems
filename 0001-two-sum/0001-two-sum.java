@@ -5,7 +5,8 @@ class Solution {
         for(int i=0;i<n;i++){
             int rem=target-nums[i];
             if(!map.containsKey(rem)){
-            map.put(nums[i],i);}
+                map.put(nums[i],i);
+            }
             else{
                 return new int[]{map.get(rem),i};
             }
