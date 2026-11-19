@@ -11,7 +11,7 @@ class Solution {
             }
             else{
                 ans.add(curr);
-                curr=next;                
+                curr=next;
             }
         }
         ans.add(curr);
