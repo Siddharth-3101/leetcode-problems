@@ -10,7 +10,7 @@ class Solution {
         while(!queue.isEmpty()){
             int size=queue.size();
             while(size!=0){
-                 String curr=queue.poll();
+                String curr=queue.poll();
                 char[] ch=curr.toCharArray();
                 for(int i=0;i<ch.length;i++){
                     for(int j=0;j<26;j++){
